@@ -74,11 +74,11 @@ public class ParallelPeopleDetector extends RecursiveAction {
             if ((row != imageHeight) && !previousColumnHadSomething) {
                 previousColumnHadSomething = true;
                 this.people.addHorizontalStartBoundary(column);
-                System.out.println("ID: " + this.id + " Starting column: " + column);
+                //System.out.println("ID: " + this.id + " Starting column: " + column);
             } else if ((row == imageHeight) && previousColumnHadSomething){
                 previousColumnHadSomething = false;
                 this.people.addHorizontalEndBoundary(column);
-                System.out.println("ID: " + this.id + " Ending column: " + column);
+                //System.out.println("ID: " + this.id + " Ending column: " + column);
             }
 
         }

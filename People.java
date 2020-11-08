@@ -18,19 +18,19 @@ public class People {
         peopleEndHorizontalBoundaries = new ArrayList<Integer>();
     }
 
-    public void addHorizontalStartBoundary (int boundary) {
+    public synchronized void addHorizontalStartBoundary (int boundary) {
         this.peopleStartHorizontalBoundaries.add(boundary);
     }
 
-    public void addHorizontalEndBoundary (int boundary) {
+    public synchronized void addHorizontalEndBoundary (int boundary) {
         this.peopleEndHorizontalBoundaries.add(boundary);
     }
 
-    public ArrayList<Integer> getHorizontalStartBoundaries () {
+    public synchronized ArrayList<Integer> getHorizontalStartBoundaries () {
         return this.peopleStartHorizontalBoundaries;
     }
 
-    public ArrayList<Integer> getHorizontalEndBoundaries () {
+    public synchronized ArrayList<Integer> getHorizontalEndBoundaries () {
         return this.peopleEndHorizontalBoundaries;
     }
 
