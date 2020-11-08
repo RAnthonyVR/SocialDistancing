@@ -14,6 +14,7 @@ Logic:
     2•  Receives an image from the camera to process in a sequential manner.
     3•	Detect if someone has arrived or something changes by marking the differences between these images.
     4•	Applying a binary filter to creaarly mark the differences detected and differentiate between empys spaces and objects.
+    4.1•Reduce image noise with median filter
     5•	Analyzing the distances between the new objects in the scene to calculate the distance between them.
  */
 
@@ -24,80 +25,94 @@ public class Main {
         // 1•	Have an reference of an image of the scene before the people arrive.
 
         // Read the background image (without people)
-        BufferedImage scenarioImage = ImageIO.read(new File("images/camera4/emptyClinic.jpg"));
+        BufferedImage scenarioImage = ImageIO.read(new File("images/WaitingRoomQueueCamera/WaitingRoominGreen.jpg"));
         int height = scenarioImage.getHeight();
         int width = scenarioImage.getWidth();
 
         // Initial configuration, (entering the horizontal distance of the room)
         System.out.println("Initial configuration");
         Scanner distanceScanner = new Scanner(System.in);
-        // horizontal distance in M (2 Dimentional) to scale from pixels to M
+
+        // horizontal distance in meters (2 Dimentional) to scale from pixels length to meters
         System.out.println("Please enter the horizontal distance of the room in meters");
-        double horizontal_distance_in_the_room_meters = distanceScanner.nextDouble(); // 3.5 meters
+        double horizontal_distance_in_the_room_meters = 3.5; //distanceScanner.nextDouble(); // 3.5 meters
         double social_distance_meters = 1; // meters
 
-        // simple rule of 3
+        // simple rule of 3 to get the social distance to pixels in the image (number of pixels must be integer)
         double social_distance_pixel = (width * social_distance_meters) / horizontal_distance_in_the_room_meters;
-
         int social_distance_pixelscale = (int)social_distance_pixel;
 
-        //System.out.println("Social distance in pixels: " + social_distance_pixelscale);
-
         // Receives an image update from the camera
-        BufferedImage currentImage = ImageIO.read(new File("images/camera4/5.jpg"));
+        BufferedImage currentImage = ImageIO.read(new File("images/WaitingRoomQueueCamera/test3.jpg"));
 
+        int cores = Runtime.getRuntime().availableProcessors();
+        System.out.println("Cores: " + cores);
+        
         // The actual number of threads that will process the image
         int numberOfThreads = 2;
 
         // Assign a piece of the image to pe processed
         int assignedHeight = height / numberOfThreads;
-        // difference should be zero
+        // The difference should be zero
         int difference = height - (assignedHeight * numberOfThreads);
-        
+
+        //System.out.println("\nassignedHeight: " + assignedHeight + "\n");
+
+        // Transform the both readed images to matrices to be processed, as well as allocating memory space for the resulting matrix
         ImageConverter imageConverter = new ImageConverter(width, height);
         int [] scenarioImageMatrix = imageConverter.ConvertImageToMatrix(scenarioImage, width, height);
         int [] currentImageMatrix = imageConverter.ConvertImageToMatrix(currentImage, width, height);
-
         int [] resultImageMatrix = new int[height * width];
 
         // 3•	Detect if someone has arrived or something changes by marking the differences between these images.
-        // 4•	Applying a binary filter to crearly mark the differences detected and differentiate between empys spaces and objects.
+        // 4•	Applying a binary filter to crearly mark the differences detected and differentiate between empty spaces and objects.
+
+        // Instantiate parallel class that subtracts the images and applies a binary filter, using a thread pool and fork join
         ParallelBinarizedChanges pbc = new ParallelBinarizedChanges (width, 0, height, currentImageMatrix, scenarioImageMatrix, assignedHeight, resultImageMatrix);
         ForkJoinPool threadPool = new ForkJoinPool();
         
-        // Measure the time taken to binarize the image with the changes
-        long beginTimeInMiliseconds = System.currentTimeMillis();
+        // Measure the time taken to detech changes and binarize the image in a parallel way (printed at the end)
+        double beginTimeInMiliseconds = System.currentTimeMillis();
         threadPool.invoke(pbc);
-        long finishTimeInMiliseconds = System.currentTimeMillis();
+        double finishTimeInMiliseconds = System.currentTimeMillis();
+        double parallelTimeToDetectChangesAndBinarize = (finishTimeInMiliseconds - beginTimeInMiliseconds);
 
-        System.out.println("\nPROCESING TIME INFORMATION:");
-        System.out.println("Total time taken to detect changes and binarize on parallel in miliseconds using "+ numberOfThreads + " threads: " + (finishTimeInMiliseconds - beginTimeInMiliseconds));
+        //System.out.println("\nUsing: " + numberOfThreads + " thread " + parallelTimeToDetectChangesAndBinarize + "\n");
+
+        // Calculate sequential time to compare time between sequential and parallel version
         
-        // Compare time with sequential version
-        /*
-        beginTimeInMiliseconds = System.currentTimeMillis();
         SequentialBinarizedChanges sbc = new SequentialBinarizedChanges(width, height);
+        beginTimeInMiliseconds = System.currentTimeMillis();
         sbc.compute (width, height, currentImageMatrix, scenarioImageMatrix, resultImageMatrix, currentImage);
         finishTimeInMiliseconds = System.currentTimeMillis();
-        System.out.println("Total time taken to detect changes and binarize on sequential in miliseconds: " + (finishTimeInMiliseconds - beginTimeInMiliseconds));
-        */
+        double sequentialTimeToDetectChangesAndBinarize = (finishTimeInMiliseconds - beginTimeInMiliseconds);
 
+        // TESTING BY WRITTING THE RESULT ON AN IMAGE
         //currentImage = imageConverter.ConvertMatrixToImage(resultImageMatrix, currentImage, width, height);
         //ImageIO.write(currentImage, "jpg", new File("images/camera4/detectedBinarizedChanges.jpg"));
 
         // 4.1 Reduce image noise with median filter
 
-        assignedHeight = (height - 1);
-
-        int [] reducedNoiseImageMatrix = new int[height * width];
-
+        // Invoke parallel implementation
+        assignedHeight = (height - 1)/numberOfThreads;
+        int [] reducedNoiseImageMatrix = new int[height * width]; // Resulting matrix
         ParallelNoiseReducer pnr = new ParallelNoiseReducer (width, height, 0, height, resultImageMatrix, assignedHeight, reducedNoiseImageMatrix);
-
+        beginTimeInMiliseconds = System.currentTimeMillis();
         threadPool.invoke(pnr);
+        finishTimeInMiliseconds = System.currentTimeMillis();
+        double parallelTimeNoiseReduction = (finishTimeInMiliseconds - beginTimeInMiliseconds);
+
+        // Invoke sequential implementation
+        SequentialNoiseReducer snr = new SequentialNoiseReducer (width, height, 0, height, resultImageMatrix, height, reducedNoiseImageMatrix);
+        beginTimeInMiliseconds = System.currentTimeMillis();
+        snr.compute();
+        finishTimeInMiliseconds = System.currentTimeMillis();
+        double sequentialTimeNoiseReduction = (finishTimeInMiliseconds - beginTimeInMiliseconds);
 
         currentImage = imageConverter.ConvertMatrixToImage(reducedNoiseImageMatrix, currentImage, width, height);
         
-        ImageIO.write(currentImage, "jpg", new File("images/camera4/imageWithoutNoise.jpg"));
+        // TESTING BY WRITTING THE RESULT ON AN IMAGE
+        ImageIO.write(currentImage, "jpg", new File("images/WaitingRoomQueueCamera/imageWithoutNoise.jpg"));
 
         // 5•	Analyzing the distances between the new objects in the scene to calculate the distance between them.
 
@@ -109,37 +124,24 @@ public class Main {
 
         People people = new People();
         
-        ParallelPeopleDetector ppd = new ParallelPeopleDetector(0, width, reducedNoiseImageMatrix, assignedWidth, height, width, 0, people);
+        ParallelPeopleDetector ppd = new ParallelPeopleDetector(0, width, reducedNoiseImageMatrix, assignedWidth, height, width, people);
         beginTimeInMiliseconds = System.currentTimeMillis();
         threadPool.invoke(ppd);
         finishTimeInMiliseconds = System.currentTimeMillis();
+        double parallelTimePeopleDetector = (finishTimeInMiliseconds - beginTimeInMiliseconds);
 
-        System.out.println("Total time taken to detect people on parallel in miliseconds using "+ numberOfThreads + " threads: " + (finishTimeInMiliseconds - beginTimeInMiliseconds));
+        SequentialPeopleDetector spd = new SequentialPeopleDetector(0, width, reducedNoiseImageMatrix, width, height, width, people);
+        beginTimeInMiliseconds = System.currentTimeMillis();
+        spd.compute();
+        finishTimeInMiliseconds = System.currentTimeMillis();
+        double sequentialTimePeopleDetector = (finishTimeInMiliseconds - beginTimeInMiliseconds);
         
         // JOIN OF THE RESULTS
 
+        double beginTimeInMilisecondsJOIN = System.currentTimeMillis();
+
         ArrayList<Integer> peopleHorizontalStartBoundaries = people.getHorizontalStartBoundaries();
         ArrayList<Integer> peopleHorizontalEndBoundaries = people.getHorizontalEndBoundaries();
-
-        /* DEBUGGING
-        if (peopleHorizontalStartBoundaries.isEmpty()) {
-            System.out.println("peopleHorizontalStartBoundaries vacio");
-        }else{
-            System.out.println(peopleHorizontalStartBoundaries.size());
-            for (int i = 0; i < peopleHorizontalStartBoundaries.size(); i++) {
-                System.out.print(peopleHorizontalStartBoundaries.get(i) + " ");
-            }
-        }
-        System.out.print("\n");
-
-        if (peopleHorizontalEndBoundaries.isEmpty()) {
-            System.out.println("peopleHorizontalEndBoundaries vacio");
-        }else{
-            System.out.println(peopleHorizontalEndBoundaries.size());
-            for (int i = 0; i < peopleHorizontalEndBoundaries.size(); i++) {
-                System.out.print(peopleHorizontalEndBoundaries.get(i) + " ");
-            }
-        }*/
 
         Collections.sort(peopleHorizontalStartBoundaries);
         Collections.sort(peopleHorizontalEndBoundaries);
@@ -178,7 +180,9 @@ public class Main {
         int numberOfPeople;
 
         numberOfPeople = Math.max(normPeopleHorizontalStartBoundaries.size(), normPeopleHorizontalEndBoundaries.size());
-        
+
+        // Print the results (number of people dected, distance bounds, social distance and processing times)
+
         System.out.println("\nOBTAINED INFORMATION: ");
         System.out.println("Number of people in the room: " + numberOfPeople);
 
@@ -218,10 +222,33 @@ public class Main {
             }
             
         }
-        
+
+        double finishTimeInMilisecondsJOIN = System.currentTimeMillis();
+
+        System.out.println("\nTime to join: " + (finishTimeInMilisecondsJOIN - beginTimeInMilisecondsJOIN) + "\n");
 
         System.out.print("\n\n");
-        
+
+        // Print processing times
+        System.out.println("\nPROCESING TIME INFORMATION:\n");
+        // Changes between images and binarization
+        System.out.println("Total time taken to detect changes and binarize on parallel using "+ numberOfThreads + " threads: " + parallelTimeToDetectChangesAndBinarize + " miliseconds");
+        System.out.println("Total time taken to detect changes and binarize on sequential: " + sequentialTimeToDetectChangesAndBinarize + " miliseconds" + "\n");
+
+        System.out.println("Total time taken to reduce noise on parallel using "+ numberOfThreads + " threads: " + parallelTimeNoiseReduction + " miliseconds");
+        System.out.println("Total time taken to reduce noise on sequential sequential: " + sequentialTimeNoiseReduction + " miliseconds" + "\n");
+
+        System.out.println("Total time taken to detect people on parallel using "+ numberOfThreads + " threads: " + parallelTimePeopleDetector + " miliseconds");
+        System.out.println("Total time taken to detect people on sequential: " + sequentialTimePeopleDetector + " miliseconds" + "\n");
+
+        double totalTimeParallel = (parallelTimeToDetectChangesAndBinarize + parallelTimeNoiseReduction + parallelTimePeopleDetector );
+        double totalTimeSequential = (sequentialTimeToDetectChangesAndBinarize + sequentialTimeNoiseReduction + sequentialTimePeopleDetector);
+        System.out.println("Addition of times parallel: " + totalTimeParallel + "\n");
+        System.out.println("Addition of times sequential: " + totalTimeSequential  + "\n");
+
+        System.out.println("Saved time: " + (totalTimeSequential-totalTimeParallel));
+
+        System.out.print("\n\n");
     }
 
 }

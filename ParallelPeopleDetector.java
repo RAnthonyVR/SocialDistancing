@@ -15,7 +15,6 @@ public class ParallelPeopleDetector extends RecursiveAction {
     private int imageHeight;
     private int imageWidth;
     private int assignedWidth;
-    private int id;
     private People people;
 
     //Algorithm:
@@ -32,15 +31,13 @@ public class ParallelPeopleDetector extends RecursiveAction {
         2. Save max width of persons ()
     */
 
-    public ParallelPeopleDetector (int beginColumnRGB, int endColumnRGB, int [] currentImageMatrix, int assignedWidth, int height, int width, int id, People people) {
-
+    public ParallelPeopleDetector (int beginColumnRGB, int endColumnRGB, int [] currentImageMatrix, int assignedWidth, int height, int width, People people) {
         this.beginColumnRGB = beginColumnRGB;
         this.endColumnRGB = endColumnRGB;
         this.currentImageMatrix = currentImageMatrix;
         this.imageHeight = height;
         this.imageWidth = width;
         this.assignedWidth = assignedWidth;
-        this.id = id;
         this.people = people;
     }
 
@@ -74,11 +71,11 @@ public class ParallelPeopleDetector extends RecursiveAction {
             if ((row != imageHeight) && !previousColumnHadSomething) {
                 previousColumnHadSomething = true;
                 this.people.addHorizontalStartBoundary(column);
-                //System.out.println("ID: " + this.id + " Starting column: " + column);
+                //System.out.println(" Starting column: " + column);
             } else if ((row == imageHeight) && previousColumnHadSomething){
                 previousColumnHadSomething = false;
                 this.people.addHorizontalEndBoundary(column);
-                //System.out.println("ID: " + this.id + " Ending column: " + column);
+                //System.out.println(" Ending column: " + column);
             }
 
         }
@@ -93,8 +90,8 @@ public class ParallelPeopleDetector extends RecursiveAction {
         else {
             int newassignedWidth = (endColumnRGB - beginColumnRGB) / 2;
 
-            ParallelPeopleDetector t1 = new ParallelPeopleDetector(beginColumnRGB, (beginColumnRGB + newassignedWidth), currentImageMatrix, assignedWidth, imageHeight, imageWidth, this.id + 1, people);
-            ParallelPeopleDetector t2 = new ParallelPeopleDetector((beginColumnRGB + newassignedWidth), endColumnRGB, currentImageMatrix, assignedWidth, imageHeight, imageWidth, this.id + 2, people);
+            ParallelPeopleDetector t1 = new ParallelPeopleDetector(beginColumnRGB, (beginColumnRGB + newassignedWidth), currentImageMatrix, assignedWidth, imageHeight, imageWidth, people);
+            ParallelPeopleDetector t2 = new ParallelPeopleDetector((beginColumnRGB + newassignedWidth), endColumnRGB, currentImageMatrix, assignedWidth, imageHeight, imageWidth, people);
 
             invokeAll(t1, t2);
         }
