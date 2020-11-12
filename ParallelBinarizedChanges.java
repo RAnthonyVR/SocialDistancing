@@ -45,8 +45,11 @@ public class ParallelBinarizedChanges extends RecursiveAction {
                 
                 int color;
                 color = 0;
+
+                int threshold = 30;
+
                 // drastic changes (black)
-                if ((Math.abs(red - red2) > 10) || (Math.abs(green - green2) > 10) || (Math.abs(blue - blue2) > 10)) {
+                if ((Math.abs(red - red2) > threshold) || (Math.abs(green - green2) > threshold) || (Math.abs(blue - blue2) > threshold)) {
                     // System.out.println("" + rgb + rgb2);
                     resultImageMatrix[column + (row * imageWidth)] = color;
                 } else { // small or no changes at all (white)

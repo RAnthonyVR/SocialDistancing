@@ -32,6 +32,7 @@ public class SocialDistanceDetector {
     private int width;
     private int height;
     private People people;
+    private ImageConverter imageConverter;
 
     //images matrixes
     private int [] scenarioImageMatrix;
@@ -112,9 +113,28 @@ public class SocialDistanceDetector {
             sequentialTimeNoiseReduction = (finishTimeInMiliseconds - beginTimeInMiliseconds);
         }
 
-        // TESTING BY WRITTING THE RESULT ON AN IMAGE
-        // currentImage = imageConverter.ConvertMatrixToImage(reducedNoiseImageMatrix, currentImage, width, height);
-        // ImageIO.write(currentImage, "jpg", new File("images/WaitingRoomQueueCamera/imageWithoutNoise.jpg"));
+        //  WRITTING THE RESULT ON AN IMAGE
+        /*
+        currentImage = imageConverter.ConvertMatrixToImage(reducedNoiseImageMatrix, currentImage, width, height);
+        try {
+            ImageIO.write(currentImage, "jpg", new File("images/WaitingRoomQueueCamera/imageWithoutNoise.jpg"));
+        } catch (IOException ioe) {
+            System.out.println("Couldn't write image withou noise");
+        }*/
+        
+    }
+
+    public void removeNoiseFromBoundaries () {
+        int pixelnumtolerance = 10;
+        //System.out.println("RESTAS:");
+        for (int i = 0; i < normPeopleHorizontalEndBoundaries.size(); i++) {
+            //System.out.println("ENTRO CON "+ normPeopleHorizontalStartBoundaries.get(i) + " " + normPeopleHorizontalEndBoundaries.get(i) + " ");
+            if ((normPeopleHorizontalEndBoundaries.get(i) - normPeopleHorizontalStartBoundaries.get(i)) < 10) {
+                normPeopleHorizontalStartBoundaries.remove(i);
+                normPeopleHorizontalEndBoundaries.remove(i);
+            }
+            
+        }
     }
 
     public void joinObtainedBoundaries() {
@@ -171,16 +191,17 @@ public class SocialDistanceDetector {
 
     // Print the results (number of people dected, distance bounds and social distance results)
     public void printPeopleObtainedInformation () {
+        removeNoiseFromBoundaries();
         int numberOfPeople = Math.max(normPeopleHorizontalStartBoundaries.size(), normPeopleHorizontalEndBoundaries.size());
 
         System.out.println("\nOBTAINED INFORMATION: ");
-        System.out.println("Number of people in the room: " + numberOfPeople);
-        System.out.println("Starts in pixels: ");
+        System.out.println("* Number of people in the room: " + numberOfPeople + "\n");
+        System.out.print("Starts in pixels: ");
         for (int i = 0; i < normPeopleHorizontalStartBoundaries.size(); i++) {
             System.out.print(normPeopleHorizontalStartBoundaries.get(i) + " ");
         }
         System.out.print("\n");
-        System.out.println("Ends in pixels:");
+        System.out.print("Ends in pixels: ");
         for (int i = 0; i < normPeopleHorizontalEndBoundaries.size(); i++) {
             System.out.print(normPeopleHorizontalEndBoundaries.get(i) + " ");
         }
@@ -190,17 +211,18 @@ public class SocialDistanceDetector {
                 System.out.print(normPeopleHorizontalStartBoundaries.get(i + 1) - normPeopleHorizontalEndBoundaries.get(i) + " ");
             }
         }
+        System.out.print("\n");
 
         if (numberOfPeople > 1) {
             System.out.println("\nDistances between them in meters: ");
             for (int i = 0; i < numberOfPeople - 1; i++) {
                 double distanceInPixels = normPeopleHorizontalStartBoundaries.get(i + 1) - normPeopleHorizontalEndBoundaries.get(i);
                 double distanceInMeters = (horizontal_distance_in_the_room_meters * distanceInPixels) / width;
-                System.out.print(String.format("%.2f", distanceInMeters) + " ");
+                System.out.print(String.format("\n%.2f", distanceInMeters) + " ");
                 if (distanceInMeters >= social_distance_meters) {
-                    System.out.print(" = Respecting social distance");
+                    System.out.print(" = Respecting social distance\n");
                 } else {
-                    System.out.print("ALERT! Not respecting social distance");
+                    System.out.print(" = ALERT! Not respecting social distance\n");
                     // sound alert
                     // Consulted: https://www.youtube.com/watch?v=8NUSbY_7Joc
                     int a = 7;
@@ -213,7 +235,6 @@ public class SocialDistanceDetector {
 
     // Print processing times, compare times between sequential and parallel
     public void printProcessingTimes (double parallelTimeToDetectChangesAndBinarize, double sequentialTimeToDetectChangesAndBinarize, double parallelTimeNoiseReduction, double sequentialTimeNoiseReduction, double parallelTimePeopleDetector, double sequentialTimePeopleDetector ) {
-        System.out.print("\n\n");
         System.out.println("\nPROCESING TIME INFORMATION:\n");
         System.out.println("Total time taken to detect changes and binarize on parallel using "+ this.numberOfThreads + " threads: " + parallelTimeToDetectChangesAndBinarize + " miliseconds");
         if (this.runToCompareWithSequential) {
@@ -249,7 +270,7 @@ public class SocialDistanceDetector {
         // 4 -----------Applying a binary filter to crearly mark the differences detected and differentiate between empty spaces and objects. ----------
 
         // Transform the both readed images to matrices to be processed, as well as allocating memory space for the resulting matrix
-        ImageConverter imageConverter = new ImageConverter(width, height);
+        imageConverter = new ImageConverter(width, height);
         scenarioImageMatrix = imageConverter.ConvertImageToMatrix(scenarioImage, width, height);
         currentImageMatrix = imageConverter.ConvertImageToMatrix(currentImage, width, height);
         resultImageMatrix = new int[height * width];
