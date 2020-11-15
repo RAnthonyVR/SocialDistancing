@@ -14,7 +14,7 @@ public class MainTestNoise {
         // 1•	Have an reference of an image of the scene before the people arrive.
 
         // Read the background image (without people)
-        BufferedImage scenarioImage = ImageIO.read(new File("images/camera4/emptyClinic.jpg"));
+        BufferedImage scenarioImage = ImageIO.read(new File("emptyClinic.jpg"));
         int height = scenarioImage.getHeight();
         int width = scenarioImage.getWidth();
 
@@ -29,7 +29,7 @@ public class MainTestNoise {
         System.out.println("Social distance in pixels: " + social_distance_pixelscale);
 
         // Receives an image update from the camera
-        BufferedImage currentImage = ImageIO.read(new File("images/camera4/8.jpg"));
+        BufferedImage currentImage = ImageIO.read(new File("5.jpg"));
 
         // The actual number of threads that will process the image
         int numberOfThreads = 4;
@@ -71,7 +71,7 @@ public class MainTestNoise {
 
         currentImage = imageConverter.ConvertMatrixToImage(reducedNoiseImageMatrix, currentImage, width, height);
         
-        ImageIO.write(currentImage, "jpg", new File("images/camera4/imageWithoutNoise.jpg"));
+        ImageIO.write(currentImage, "jpg", new File("imageWithoutNoise.jpg"));
 
     }
 
