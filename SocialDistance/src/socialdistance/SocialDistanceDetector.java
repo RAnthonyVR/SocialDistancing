@@ -131,13 +131,13 @@ public class SocialDistanceDetector {
         }
 
         // Testing the results by writing them on an image
-        
+        /*
         currentImage = imageConverter.ConvertMatrixToImage(reducedNoiseImageMatrix, currentImage, width, height);
         try {
             ImageIO.write(currentImage, "jpg", new File("imageWithoutNoise.jpg"));
         } catch (IOException ioe) {
             System.out.println("Couldn't write image withou noise");
-        }
+        }*/
     }
 
     /* Method just in case to remove extra noise that we want to ignore, setting a tolerance 
