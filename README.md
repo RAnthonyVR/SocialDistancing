@@ -52,6 +52,44 @@ The implementation has been extensively tested with several different configurat
 
 5.	The program will show information on the output shell and will open a JFrame to view the tests.
 
+Test configurations: The suggested inputs for the tests are the following:
+
+Test case 1: It is expected at all images respect social distance
+Initial configuration
+Please enter the horizontal distance of the room in meters
+5
+Please enter the social distance of the room in meters (recommended 1 meter)
+0.5
+Please enter the test case (1 to 4)
+1
+
+Test case 2: It is expected at not all images respect social distance (images 4-5)
+Initial configuration
+Please enter the horizontal distance of the room in meters
+8
+Please enter the social distance of the room in meters (recommended 1 meter)
+1
+Please enter the test case (1 to 4)
+2
+
+Test case 3: It is expected at not all images respect social distance (images 2-5)
+Initial configuration
+Please enter the horizontal distance of the room in meters
+3
+Please enter the social distance of the room in meters (recommended 1 meter)
+0.35
+Please enter the test case (1 to 4)
+3
+
+Test case 4: It is expected to detect 1 person
+Initial configuration
+Please enter the horizontal distance of the room in meters
+1
+Please enter the social distance of the room in meters (recommended 1 meter)
+2
+Please enter the test case (1 to 4)
+4
+
 6.	Closing the project
 
   6.1 The program will close until the jFrame has been closed.
