@@ -31,7 +31,7 @@ A report that contains the documentation of the project can be found on this rep
 
 ## Tests
 
-The implementation has been extensively tested with several different configurations and scenarios, the corresponding documentation can be found in [Tests](https://github.com/RAnthonyVR/SocialDistancing/tree/master/Tests)
+The implementation has been extensively tested with several different configurations and scenarios, the corresponding documentation can be found in [Tests](https://github.com/RAnthonyVR/SocialDistancing/blob/master/Tests/Documented%20Tests%20(different%20scenarios).pdf)
 
 ## Setup instructions
 
