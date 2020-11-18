@@ -19,13 +19,19 @@ A01209245
 
 "A distance detector alarm system can help make sure that people are keeping a safe distance from each other while waiting in line at an enclosed space. For this problem to be solved it is necessary to reduce the time it takes to process images and alert as fast as possible if someone is not respecting the stablished safe social distance, hence a parallel paradigm is needed. This means that instead of having a sequential way of analyzing the images with a single thread; multiple threads can be used to work at the same time on different tasks or sections and divide the overall time taken to do the tasks. This solution is intended to prevent more than 2 parties of people from getting too close to each other."
 
+The source code can be found in: [SocialDistance/src/socialdistance](https://github.com/RAnthonyVR/SocialDistancing/tree/master/SocialDistance/src/socialdistance/images) (socialdistance is the package)
+
+Interface example:
+
+![people close in an elevator example](https://github.com/RAnthonyVR/SocialDistancing/blob/master/Images%20examples%20for%20README/Elevator.png)
+
 ## Documentation
 
-A report that contains the documentation of the project can be found on this repo as FinalProjectDocument.
+A report that contains the documentation of the project can be found on this repo in [Report (Documentation)](https://github.com/RAnthonyVR/SocialDistancing/blob/master/Report%20(Documentation)/Report.pdf)
 
 ## Tests
 
-The implementation has been extensively tested with several different configurations and scenarios, the corresponding documentation can be found as Testing with different scenarios
+The implementation has been extensively tested with several different configurations and scenarios, the corresponding documentation can be found in [Tests](https://github.com/RAnthonyVR/SocialDistancing/tree/master/Tests)
 
 ## Setup instructions
 
@@ -52,4 +58,4 @@ The implementation has been extensively tested with several different configurat
 
 ## License
 
-Registered a GNU license, this means that anyone can use it if they acknowledge me please.
+Registered a GNU license.
