@@ -21,6 +21,7 @@ public class Interface extends javax.swing.JFrame {
     private ImageIcon scene;
     private BufferedImage imageScene;
     private ImageIcon redAlarmLight = new ImageIcon("alarm.png");
+    private ImageIcon greenAlarmLight = new ImageIcon("ok.png");
     private String emptyBackgroundPath;
     
     
@@ -30,8 +31,16 @@ public class Interface extends javax.swing.JFrame {
         } catch (IOException e) {
             e.printStackTrace();
         }
-
-        Image smallImage = imageScene.getScaledInstance(imageScene.getWidth()/15, imageScene.getHeight()/15, Image.SCALE_SMOOTH);
+        
+        int imageDivisor = 1;
+        
+        if (imageScene.getHeight() > 503) {
+            while ((imageScene.getHeight() / imageDivisor) > 503) {
+                imageDivisor++;
+            }
+        }
+        
+        Image smallImage = imageScene.getScaledInstance(imageScene.getWidth()/imageDivisor, imageScene.getHeight()/imageDivisor, Image.SCALE_SMOOTH);
         
         scene = new ImageIcon(smallImage);
         jLabel1.setIcon(scene);
@@ -48,7 +57,7 @@ public class Interface extends javax.swing.JFrame {
     }
     
     public void disableAlarm () {
-        jLabel2.setIcon(null);
+        jLabel2.setIcon(greenAlarmLight);
     }
     
     /**
@@ -98,9 +107,9 @@ public class Interface extends javax.swing.JFrame {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 449, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addComponent(jLabel2, javax.swing.GroupLayout.DEFAULT_SIZE, 165, Short.MAX_VALUE)
+                .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, 748, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
             .addComponent(jScrollPane1)
         );
@@ -108,13 +117,12 @@ public class Interface extends javax.swing.JFrame {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 317, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(layout.createSequentialGroup()
                         .addContainerGap()
-                        .addComponent(jLabel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 146, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(102, Short.MAX_VALUE))
+                        .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 503, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 239, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
 
         pack();

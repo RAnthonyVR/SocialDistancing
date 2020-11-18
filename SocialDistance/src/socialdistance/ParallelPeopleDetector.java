@@ -128,12 +128,10 @@ public class ParallelPeopleDetector extends RecursiveAction {
             // create workers and set their intervals
             ParallelPeopleDetector t1 = new ParallelPeopleDetector(beginColumnRGB, (beginColumnRGB + newassignedWidth), currentImageMatrix, assignedWidth, imageHeight, imageWidth, people);
             ParallelPeopleDetector t2 = new ParallelPeopleDetector((beginColumnRGB + newassignedWidth), endColumnRGB, currentImageMatrix, assignedWidth, imageHeight, imageWidth, people);
-            // both compute their assigned values
-            
+            // both compute their assigned values, wait for the completion of created thread
             t2.fork();
             t1.compute();
             t2.join();
-            // invokeAll(t1, t2);
         }
     }   
 

@@ -94,11 +94,10 @@ public class ParallelBinarizedChanges extends RecursiveAction {
             ParallelBinarizedChanges t1 = new ParallelBinarizedChanges(imageWidth, beginRowRGB, (beginRowRGB + newAssignedHeight), currentImage, initialImage, assignedHeight, resultImageMatrix);
             ParallelBinarizedChanges t2 = new ParallelBinarizedChanges(imageWidth, (beginRowRGB + newAssignedHeight), endRowRGB, currentImage, initialImage, assignedHeight, resultImageMatrix);
             
-            // both compute their assigned values
+            // both compute their assigned values, wait for the completion of created thread
             t2.fork();
             t1.compute();
             t2.join();
-            //invokeAll(t1, t2);
         }
     }   
 

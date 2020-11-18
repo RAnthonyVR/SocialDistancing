@@ -27,6 +27,9 @@ public class SocialDistance {
         System.out.println("Please enter the social distance of the room in meters (recommended 1 meter)");
         double social_distance_meters = distanceScanner.nextDouble(); // meters
         
+        System.out.println("Please enter the test case (1 to 4)");
+        int testCase = distanceScanner.nextInt();
+        
         int numberOfDivisions; // this value divides the image 
         boolean runToCompareWithSequential = true; // set to true to run sequential implementation and compare the running times
 
@@ -38,8 +41,6 @@ public class SocialDistance {
 
         numberOfDivisions = 8;
         
-        int testCase = 4;
-        
         //TESTS configurations
         //TEST1 
         //Horizontal distance of the room: 5
@@ -50,7 +51,6 @@ public class SocialDistance {
             numberOfImages = 5;
         }
         
-        
         //TEST2
         //Horizontal distance of the room: 8
         //Horizontal space tolerance: 1
@@ -59,7 +59,6 @@ public class SocialDistance {
             emptyscenarioImageName = "emptyHospitalWaitingLine.jpg";
             numberOfImages = 5;
         }
-        
         
         //TEST3
         //Horizontal distance of the room: 3
@@ -70,10 +69,12 @@ public class SocialDistance {
             numberOfImages = 6;
         }
         
+        //Horizontal distance of the room: 2
+        //Horizontal space tolerance: 1
         else if (testCase == 4) {
-            relativeFolderPath = "images/DistanceTests/Test_4(Sequence_with_people)/";
-            emptyscenarioImageName = "emptyClinic.jpg";
-            numberOfImages = 6;
+            relativeFolderPath = "images/RealLifeTestVisitRoom/";
+            emptyscenarioImageName = "empty.jpg";
+            numberOfImages = 1;
         }
         
         

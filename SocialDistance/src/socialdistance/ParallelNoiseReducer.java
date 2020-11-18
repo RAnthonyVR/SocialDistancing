@@ -79,11 +79,10 @@ public class ParallelNoiseReducer extends RecursiveAction {
             // create the new objects (workers and assign their subtasks limits)
             ParallelNoiseReducer t1 = new ParallelNoiseReducer(imageWidth, imageHeight, beginRowRGB, (beginRowRGB + newAssignedHeight), currentImage, assignedHeight, resultImageMatrix);
             ParallelNoiseReducer t2 = new ParallelNoiseReducer(imageWidth, imageHeight, (beginRowRGB + newAssignedHeight), endRowRGB, currentImage, assignedHeight, resultImageMatrix);
-            // both compute their assigned values
+            // both compute their assigned values, wait for the completion of created thread
             t2.fork();
             t1.compute();
             t2.join();
-            //invokeAll(t1, t2);
         }
     }   
 
