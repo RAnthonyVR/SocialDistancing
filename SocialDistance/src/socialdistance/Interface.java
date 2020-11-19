@@ -20,8 +20,8 @@ public class Interface extends javax.swing.JFrame {
 
     private ImageIcon scene;
     private BufferedImage imageScene;
-    private ImageIcon redAlarmLight = new ImageIcon("alarm.png");
-    private ImageIcon greenAlarmLight = new ImageIcon("ok.png");
+    private ImageIcon redAlarmLight = new ImageIcon(SocialDistance.class.getResource("images/Light/alarm.png"));
+    private ImageIcon greenAlarmLight = new ImageIcon(SocialDistance.class.getResource("images/Light/ok.png"));
     private String emptyBackgroundPath;
     
     

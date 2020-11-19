@@ -22,6 +22,10 @@ public class SocialDistance {
         // Initial configuration, (entering the horizontal distance of the room)
         System.out.println("Initial configuration");
         Scanner distanceScanner = new Scanner(System.in);
+        
+        System.out.println("Do you want to compare the running times with the sequential implementation: Insert Yes or No");
+        String compareRunningTimes = distanceScanner.nextLine();
+        
         System.out.println("Please enter the horizontal distance of the room in meters"); // Horizontal distance in meters (2 dimentional) to scale from pixels length to meters
         double horizontal_distance_in_the_room_meters = distanceScanner.nextDouble(); // tested with 3.5 meters
         System.out.println("Please enter the social distance of the room in meters (recommended 1 meter)");
@@ -30,8 +34,18 @@ public class SocialDistance {
         System.out.println("Please enter the test case (1 to 4)");
         int testCase = distanceScanner.nextInt();
         
-        int numberOfDivisions; // this value divides the image 
+        
+        
         boolean runToCompareWithSequential = true; // set to true to run sequential implementation and compare the running times
+        
+        if (compareRunningTimes.equals("Yes") || compareRunningTimes.equals("Y") || compareRunningTimes.equals("y")|| compareRunningTimes.equals("yes")) {
+            runToCompareWithSequential = true;
+        } else {
+            runToCompareWithSequential = false;
+        }
+        
+        int numberOfDivisions; // this value divides the image 
+        
 
         int numberOfImages = 1;
         
@@ -39,7 +53,8 @@ public class SocialDistance {
         String relativeFolderPath = "";
         String emptyscenarioImageName = "";
 
-        numberOfDivisions = 2;
+        // divisions of the image for each thread
+        numberOfDivisions = 4;
         
         //TESTS configurations
         //TEST1 
