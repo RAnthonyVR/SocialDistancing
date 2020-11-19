@@ -128,10 +128,9 @@ public class ParallelPeopleDetector extends RecursiveAction {
             // create workers and set their intervals
             ParallelPeopleDetector t1 = new ParallelPeopleDetector(beginColumnRGB, (beginColumnRGB + newassignedWidth), currentImageMatrix, assignedWidth, imageHeight, imageWidth, people);
             ParallelPeopleDetector t2 = new ParallelPeopleDetector((beginColumnRGB + newassignedWidth), endColumnRGB, currentImageMatrix, assignedWidth, imageHeight, imageWidth, people);
-            // both compute their assigned values, wait for the completion of created thread
-            t2.fork();
-            t1.compute();
-            t2.join();
+            // both threads compute their assigned values or tasks, recursive method that assigns work to thread threads and executes in order,
+            // could also use fork() and join(), doing t2.fork(); t1.compute(); t2.join(); but they are more ideal for Recursive Tasks 
+            invokeAll(t1, t2);
         }
     }   
 
