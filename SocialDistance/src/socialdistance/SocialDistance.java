@@ -34,8 +34,6 @@ public class SocialDistance {
         System.out.println("Please enter the test case (1 to 4)");
         int testCase = distanceScanner.nextInt();
         
-        
-        
         boolean runToCompareWithSequential = true; // set to true to run sequential implementation and compare the running times
         
         if (compareRunningTimes.equals("Yes") || compareRunningTimes.equals("Y") || compareRunningTimes.equals("y")|| compareRunningTimes.equals("yes")) {
@@ -84,6 +82,7 @@ public class SocialDistance {
             numberOfImages = 6;
         }
         
+        //Extra real life
         //Horizontal distance of the room: 2
         //Horizontal space tolerance: 1
         else if (testCase == 4) {
