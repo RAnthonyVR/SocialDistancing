@@ -87,9 +87,9 @@ public class SocialDistanceDetector {
         // Instantiate parallel class that subtracts the images and applies a binary filter, using a thread pool and fork join
         int assignedHeight = height / numberOfDivisions; // Assign a piece of the image to pe processed
         ParallelBinarizedChanges pbc = new ParallelBinarizedChanges (width, 0, height, currentImageMatrix, scenarioImageMatrix, assignedHeight, resultImageMatrix);
+        this.threadPool = new ForkJoinPool(); // threadpool using fork join calls compute method
         // Measure the time taken to detect changes and binarize the image in a parallel way (printed at the end)
         beginTimeInMiliseconds = System.currentTimeMillis();
-        this.threadPool = new ForkJoinPool(); // threadpool using fork join calls compute method
         threadPool.invoke(pbc);
         finishTimeInMiliseconds = System.currentTimeMillis();
         parallelTimeToDetectChangesAndBinarize = (finishTimeInMiliseconds - beginTimeInMiliseconds);

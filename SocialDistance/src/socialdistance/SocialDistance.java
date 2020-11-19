@@ -39,7 +39,7 @@ public class SocialDistance {
         String relativeFolderPath = "";
         String emptyscenarioImageName = "";
 
-        numberOfDivisions = 8;
+        numberOfDivisions = 2;
         
         //TESTS configurations
         //TEST1 
