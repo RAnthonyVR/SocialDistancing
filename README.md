@@ -19,7 +19,7 @@ A01209245
 
 "A distance detector alarm system can help make sure that people are keeping a safe distance from each other while waiting in line at an enclosed space. For this problem to be solved it is necessary to reduce the time it takes to process images and alert as fast as possible if someone is not respecting the stablished safe social distance, hence a parallel paradigm is needed. This means that instead of having a sequential way of analyzing the images with a single thread; multiple threads can be used to work at the same time on different tasks or sections and divide the overall time taken to do the tasks. This solution is intended to prevent more than 2 parties of people from getting too close to each other."
 
-The source code can be found in: [SocialDistance/src/socialdistance](https://github.com/RAnthonyVR/SocialDistancing/tree/master/SocialDistance/src/socialdistance/images) (socialdistance is the package)
+The source code can be found in: [SocialDistance/src/socialdistance](https://github.com/RAnthonyVR/SocialDistancing/tree/master/SocialDistance/src/socialdistance) (socialdistance is the package)
 
 Interface example:
 
