@@ -82,6 +82,14 @@ public class SocialDistance {
             numberOfImages = 6;
         }
         
+        //Extra real life
+        //Horizontal distance of the room: 2
+        //Horizontal space tolerance: 1
+        else if (testCase == 4) {
+            relativeFolderPath = "images/RealLifeTestVisitRoom/";
+            emptyscenarioImageName = "empty.jpg";
+            numberOfImages = 1;
+        }
         
         // concatenate path and empty space image
         String emptyscenarioImagePath = relativeFolderPath + emptyscenarioImageName;

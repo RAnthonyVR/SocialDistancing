@@ -156,6 +156,10 @@ public class SocialDistanceDetector {
                 i++;
             }
         }
+        // in case there is noise at the end
+        if ((normPeopleHorizontalStartBoundaries.size() > normPeopleHorizontalEndBoundaries.size()) && ((width - normPeopleHorizontalStartBoundaries.get(normPeopleHorizontalStartBoundaries.size() - 1)) < pixelnumtolerance)) {
+            this.normPeopleHorizontalStartBoundaries.remove(i);
+        }
     }
 
     // Method to join the boundaries calculated
