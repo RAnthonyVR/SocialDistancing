@@ -1,0 +1,546 @@
+Last login: Thu Nov 19 17:29:54 on ttys000
+
+The default interactive shell is now zsh.
+To update your account to use zsh, please run `chsh -s /bin/zsh`.
+For more details, please visit https://support.apple.com/kb/HT208050.
+Carloss-iMac:~ carlosvazquez$ clear
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Carloss-iMac:~ carlosvazquez$ cd /Users/carlosvazquez/Downloads/SocialDistancing 
+Carloss-iMac:SocialDistancing carlosvazquez$ cd /Users/carlosvazquez/Downloads/SocialDistancing/SocialDistance/src 
+Carloss-iMac:src carlosvazquez$ javac socialdistance/SocialDistance.java
+Carloss-iMac:src carlosvazquez$ java socialdistance/SocialDistance
+Initial configuration
+Please enter the horizontal distance of the room in meters
+3
+Please enter the social distance of the room in meters (recommended 1 meter)
+0.35
+Please enter the test case (1 to 4)
+3
+images/Scene3Elevator/1.jpg
+
+OBTAINED INFORMATION: 
+* Number of people in the room: 3
+
+Starts in pixels: 903 1690 3073 
+Ends in pixels: 1621 2451 3791 
+Distances between them in pixels: 
+69 622 
+
+Distances between them in meters: 
+
+0.05 m = ALERT! Not respecting social distance
+
+0.43 m = Respecting social distance
+
+PROCESING TIME INFORMATION:
+
+Total time taken to detect changes and binarize on parallel: 71.0 milliseconds
+Total time taken to detect changes and binarize on sequential: 106.0 milliseconds
+
+Total time taken to reduce noise on parallel: 209.0 milliseconds
+Total time taken to reduce noise on sequential: 677.0 milliseconds
+
+Total time taken to detect people on parallel 117.0 milliseconds
+Total time taken to detect people on sequential: 176.0 milliseconds
+
+Addition of times parallel: 397.0
+
+Addition of times sequential: 959.0
+
+Saved time: 562.0
+
+
+images/Scene3Elevator/1.jpg
+
+OBTAINED INFORMATION: 
+* Number of people in the room: 3
+
+Starts in pixels: 903 1690 3073 
+Ends in pixels: 1621 2451 3791 
+Distances between them in pixels: 
+69 622 
+
+Distances between them in meters: 
+
+0.05 m = ALERT! Not respecting social distance
+
+0.43 m = Respecting social distance
+
+PROCESING TIME INFORMATION:
+
+Total time taken to detect changes and binarize on parallel: 41.0 milliseconds
+Total time taken to detect changes and binarize on sequential: 100.0 milliseconds
+
+Total time taken to reduce noise on parallel: 448.0 milliseconds
+Total time taken to reduce noise on sequential: 659.0 milliseconds
+
+Total time taken to detect people on parallel 52.0 milliseconds
+Total time taken to detect people on sequential: 165.0 milliseconds
+
+Addition of times parallel: 541.0
+
+Addition of times sequential: 924.0
+
+Saved time: 383.0
+
+
+images/Scene3Elevator/1.jpg
+
+OBTAINED INFORMATION: 
+* Number of people in the room: 3
+
+Starts in pixels: 903 1690 3073 
+Ends in pixels: 1621 2451 3791 
+Distances between them in pixels: 
+69 622 
+
+Distances between them in meters: 
+
+0.05 m = ALERT! Not respecting social distance
+
+0.43 m = Respecting social distance
+
+PROCESING TIME INFORMATION:
+
+Total time taken to detect changes and binarize on parallel: 39.0 milliseconds
+Total time taken to detect changes and binarize on sequential: 102.0 milliseconds
+
+Total time taken to reduce noise on parallel: 415.0 milliseconds
+Total time taken to reduce noise on sequential: 869.0 milliseconds
+
+Total time taken to detect people on parallel 60.0 milliseconds
+Total time taken to detect people on sequential: 181.0 milliseconds
+
+Addition of times parallel: 514.0
+
+Addition of times sequential: 1152.0
+
+Saved time: 638.0
+
+
+images/Scene3Elevator/1.jpg
+
+OBTAINED INFORMATION: 
+* Number of people in the room: 3
+
+Starts in pixels: 903 1690 3073 
+Ends in pixels: 1621 2451 3791 
+Distances between them in pixels: 
+69 622 
+
+Distances between them in meters: 
+
+0.05 m = ALERT! Not respecting social distance
+
+0.43 m = Respecting social distance
+
+PROCESING TIME INFORMATION:
+
+Total time taken to detect changes and binarize on parallel: 36.0 milliseconds
+Total time taken to detect changes and binarize on sequential: 85.0 milliseconds
+
+Total time taken to reduce noise on parallel: 255.0 milliseconds
+Total time taken to reduce noise on sequential: 812.0 milliseconds
+
+Total time taken to detect people on parallel 58.0 milliseconds
+Total time taken to detect people on sequential: 167.0 milliseconds
+
+Addition of times parallel: 349.0
+
+Addition of times sequential: 1064.0
+
+Saved time: 715.0
+
+
+images/Scene3Elevator/1.jpg
+
+OBTAINED INFORMATION: 
+* Number of people in the room: 3
+
+Starts in pixels: 903 1690 3073 
+Ends in pixels: 1621 2451 3791 
+Distances between them in pixels: 
+69 622 
+
+Distances between them in meters: 
+
+0.05 m = ALERT! Not respecting social distance
+
+0.43 m = Respecting social distance
+
+PROCESING TIME INFORMATION:
+
+Total time taken to detect changes and binarize on parallel: 37.0 milliseconds
+Total time taken to detect changes and binarize on sequential: 85.0 milliseconds
+
+Total time taken to reduce noise on parallel: 262.0 milliseconds
+Total time taken to reduce noise on sequential: 802.0 milliseconds
+
+Total time taken to detect people on parallel 61.0 milliseconds
+Total time taken to detect people on sequential: 159.0 milliseconds
+
+Addition of times parallel: 360.0
+
+Addition of times sequential: 1046.0
+
+Saved time: 686.0
+
+
+images/Scene3Elevator/1.jpg
+
+OBTAINED INFORMATION: 
+* Number of people in the room: 3
+
+Starts in pixels: 903 1690 3073 
+Ends in pixels: 1621 2451 3791 
+Distances between them in pixels: 
+69 622 
+
+Distances between them in meters: 
+
+0.05 m = ALERT! Not respecting social distance
+
+0.43 m = Respecting social distance
+
+PROCESING TIME INFORMATION:
+
+Total time taken to detect changes and binarize on parallel: 37.0 milliseconds
+Total time taken to detect changes and binarize on sequential: 82.0 milliseconds
+
+Total time taken to reduce noise on parallel: 283.0 milliseconds
+Total time taken to reduce noise on sequential: 789.0 milliseconds
+
+Total time taken to detect people on parallel 55.0 milliseconds
+Total time taken to detect people on sequential: 163.0 milliseconds
+
+Addition of times parallel: 375.0
+
+Addition of times sequential: 1034.0
+
+Saved time: 659.0
+
+
+images/Scene3Elevator/1.jpg
+
+OBTAINED INFORMATION: 
+* Number of people in the room: 3
+
+Starts in pixels: 903 1690 3073 
+Ends in pixels: 1621 2451 3791 
+Distances between them in pixels: 
+69 622 
+
+Distances between them in meters: 
+
+0.05 m = ALERT! Not respecting social distance
+
+0.43 m = Respecting social distance
+
+PROCESING TIME INFORMATION:
+
+Total time taken to detect changes and binarize on parallel: 38.0 milliseconds
+Total time taken to detect changes and binarize on sequential: 84.0 milliseconds
+
+Total time taken to reduce noise on parallel: 391.0 milliseconds
+Total time taken to reduce noise on sequential: 813.0 milliseconds
+
+Total time taken to detect people on parallel 53.0 milliseconds
+Total time taken to detect people on sequential: 170.0 milliseconds
+
+Addition of times parallel: 482.0
+
+Addition of times sequential: 1067.0
+
+Saved time: 585.0
+
+
+images/Scene3Elevator/1.jpg
+
+OBTAINED INFORMATION: 
+* Number of people in the room: 3
+
+Starts in pixels: 903 1690 3073 
+Ends in pixels: 1621 2451 3791 
+Distances between them in pixels: 
+69 622 
+
+Distances between them in meters: 
+
+0.05 m = ALERT! Not respecting social distance
+
+0.43 m = Respecting social distance
+
+PROCESING TIME INFORMATION:
+
+Total time taken to detect changes and binarize on parallel: 53.0 milliseconds
+Total time taken to detect changes and binarize on sequential: 85.0 milliseconds
+
+Total time taken to reduce noise on parallel: 259.0 milliseconds
+Total time taken to reduce noise on sequential: 809.0 milliseconds
+
+Total time taken to detect people on parallel 52.0 milliseconds
+Total time taken to detect people on sequential: 161.0 milliseconds
+
+Addition of times parallel: 364.0
+
+Addition of times sequential: 1055.0
+
+Saved time: 691.0
+
+
+images/Scene3Elevator/1.jpg
+
+OBTAINED INFORMATION: 
+* Number of people in the room: 3
+
+Starts in pixels: 903 1690 3073 
+Ends in pixels: 1621 2451 3791 
+Distances between them in pixels: 
+69 622 
+
+Distances between them in meters: 
+
+0.05 m = ALERT! Not respecting social distance
+
+0.43 m = Respecting social distance
+
+PROCESING TIME INFORMATION:
+
+Total time taken to detect changes and binarize on parallel: 34.0 milliseconds
+Total time taken to detect changes and binarize on sequential: 84.0 milliseconds
+
+Total time taken to reduce noise on parallel: 412.0 milliseconds
+Total time taken to reduce noise on sequential: 834.0 milliseconds
+
+Total time taken to detect people on parallel 52.0 milliseconds
+Total time taken to detect people on sequential: 169.0 milliseconds
+
+Addition of times parallel: 498.0
+
+Addition of times sequential: 1087.0
+
+Saved time: 589.0
+
+
+images/Scene3Elevator/1.jpg
+
+OBTAINED INFORMATION: 
+* Number of people in the room: 3
+
+Starts in pixels: 903 1690 3073 
+Ends in pixels: 1621 2451 3791 
+Distances between them in pixels: 
+69 622 
+
+Distances between them in meters: 
+
+0.05 m = ALERT! Not respecting social distance
+
+0.43 m = Respecting social distance
+
+PROCESING TIME INFORMATION:
+
+Total time taken to detect changes and binarize on parallel: 35.0 milliseconds
+Total time taken to detect changes and binarize on sequential: 82.0 milliseconds
+
+Total time taken to reduce noise on parallel: 271.0 milliseconds
+Total time taken to reduce noise on sequential: 791.0 milliseconds
+
+Total time taken to detect people on parallel 55.0 milliseconds
+Total time taken to detect people on sequential: 160.0 milliseconds
+
+Addition of times parallel: 361.0
+
+Addition of times sequential: 1033.0
+
+Saved time: 672.0
+
+
+images/Scene3Elevator/1.jpg
+
+OBTAINED INFORMATION: 
+* Number of people in the room: 3
+
+Starts in pixels: 903 1690 3073 
+Ends in pixels: 1621 2451 3791 
+Distances between them in pixels: 
+69 622 
+
+Distances between them in meters: 
+
+0.05 m = ALERT! Not respecting social distance
+
+0.43 m = Respecting social distance
+
+PROCESING TIME INFORMATION:
+
+Total time taken to detect changes and binarize on parallel: 36.0 milliseconds
+Total time taken to detect changes and binarize on sequential: 84.0 milliseconds
+
+Total time taken to reduce noise on parallel: 271.0 milliseconds
+Total time taken to reduce noise on sequential: 812.0 milliseconds
+
+Total time taken to detect people on parallel 65.0 milliseconds
+Total time taken to detect people on sequential: 161.0 milliseconds
+
+Addition of times parallel: 372.0
+
+Addition of times sequential: 1057.0
+
+Saved time: 685.0
+
+
+images/Scene3Elevator/1.jpg
+
+OBTAINED INFORMATION: 
+* Number of people in the room: 3
+
+Starts in pixels: 903 1690 3073 
+Ends in pixels: 1621 2451 3791 
+Distances between them in pixels: 
+69 622 
+
+Distances between them in meters: 
+
+0.05 m = ALERT! Not respecting social distance
+
+0.43 m = Respecting social distance
+
+PROCESING TIME INFORMATION:
+
+Total time taken to detect changes and binarize on parallel: 36.0 milliseconds
+Total time taken to detect changes and binarize on sequential: 83.0 milliseconds
+
+Total time taken to reduce noise on parallel: 293.0 milliseconds
+Total time taken to reduce noise on sequential: 818.0 milliseconds
+
+Total time taken to detect people on parallel 53.0 milliseconds
+Total time taken to detect people on sequential: 161.0 milliseconds
+
+Addition of times parallel: 382.0
+
+Addition of times sequential: 1062.0
+
+Saved time: 680.0
+
+
+images/Scene3Elevator/1.jpg
+
+OBTAINED INFORMATION: 
+* Number of people in the room: 3
+
+Starts in pixels: 903 1690 3073 
+Ends in pixels: 1621 2451 3791 
+Distances between them in pixels: 
+69 622 
+
+Distances between them in meters: 
+
+0.05 m = ALERT! Not respecting social distance
+
+0.43 m = Respecting social distance
+
+PROCESING TIME INFORMATION:
+
+Total time taken to detect changes and binarize on parallel: 35.0 milliseconds
+Total time taken to detect changes and binarize on sequential: 87.0 milliseconds
+
+Total time taken to reduce noise on parallel: 291.0 milliseconds
+Total time taken to reduce noise on sequential: 810.0 milliseconds
+
+Total time taken to detect people on parallel 52.0 milliseconds
+Total time taken to detect people on sequential: 158.0 milliseconds
+
+Addition of times parallel: 378.0
+
+Addition of times sequential: 1055.0
+
+Saved time: 677.0
+
+
+images/Scene3Elevator/1.jpg
+
+OBTAINED INFORMATION: 
+* Number of people in the room: 3
+
+Starts in pixels: 903 1690 3073 
+Ends in pixels: 1621 2451 3791 
+Distances between them in pixels: 
+69 622 
+
+Distances between them in meters: 
+
+0.05 m = ALERT! Not respecting social distance
+
+0.43 m = Respecting social distance
+
+PROCESING TIME INFORMATION:
+
+Total time taken to detect changes and binarize on parallel: 35.0 milliseconds
+Total time taken to detect changes and binarize on sequential: 83.0 milliseconds
+
+Total time taken to reduce noise on parallel: 259.0 milliseconds
+Total time taken to reduce noise on sequential: 801.0 milliseconds
+
+Total time taken to detect people on parallel 53.0 milliseconds
+Total time taken to detect people on sequential: 158.0 milliseconds
+
+Addition of times parallel: 347.0
+
+Addition of times sequential: 1042.0
+
+Saved time: 695.0
+
+
+images/Scene3Elevator/1.jpg
+
+OBTAINED INFORMATION: 
+* Number of people in the room: 3
+
+Starts in pixels: 903 1690 3073 
+Ends in pixels: 1621 2451 3791 
+Distances between them in pixels: 
+69 622 
+
+Distances between them in meters: 
+
+0.05 m = ALERT! Not respecting social distance
+
+0.43 m = Respecting social distance
+
+PROCESING TIME INFORMATION:
+
+Total time taken to detect changes and binarize on parallel: 36.0 milliseconds
+Total time taken to detect changes and binarize on sequential: 83.0 milliseconds
+
+Total time taken to reduce noise on parallel: 409.0 milliseconds
+Total time taken to reduce noise on sequential: 813.0 milliseconds
+
+Total time taken to detect people on parallel 53.0 milliseconds
+Total time taken to detect people on sequential: 159.0 milliseconds
+
+Addition of times parallel: 498.0
+
+Addition of times sequential: 1055.0
+
+Saved time: 557.0
+
+
+Carloss-iMac:src carlosvazquez$ 

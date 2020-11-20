@@ -1,0 +1,556 @@
+Last login: Thu Nov 19 11:03:18 on console
+
+The default interactive shell is now zsh.
+To update your account to use zsh, please run `chsh -s /bin/zsh`.
+For more details, please visit https://support.apple.com/kb/HT208050.
+Carloss-iMac:~ carlosvazquez$ cd /Users/carlosvazquez/Downloads/SocialDistancing/SocialDistance/src 
+Carloss-iMac:src carlosvazquez$ javac socialdistance/SocialDistance.java
+Carloss-iMac:src carlosvazquez$ java socialdistance/SocialDistance
+Initial configuration
+Please enter the horizontal distance of the room in meters
+5
+Please enter the social distance of the room in meters (recommended 1 meter)
+0.5
+Please enter the test case (1 to 4)
+1
+images/Scene1Theater/1.jpg
+
+OBTAINED INFORMATION: 
+* Number of people in the room: 4
+
+Starts in pixels: 37 940 1819 2567 
+Ends in pixels: 472 1334 2081 2991 
+Distances between them in pixels: 
+468 485 486 
+
+Distances between them in meters: 
+
+0.78 m = Respecting social distance
+
+0.81 m = Respecting social distance
+
+0.81 m = Respecting social distance
+
+PROCESING TIME INFORMATION:
+
+Total time taken to detect changes and binarize on parallel: 34.0 milliseconds
+Total time taken to detect changes and binarize on sequential: 41.0 milliseconds
+
+Total time taken to reduce noise on parallel: 137.0 milliseconds
+Total time taken to reduce noise on sequential: 201.0 milliseconds
+
+Total time taken to detect people on parallel 34.0 milliseconds
+Total time taken to detect people on sequential: 41.0 milliseconds
+
+Addition of times parallel: 205.0
+
+Addition of times sequential: 283.0
+
+Saved time: 78.0
+
+
+images/Scene1Theater/1.jpg
+
+OBTAINED INFORMATION: 
+* Number of people in the room: 4
+
+Starts in pixels: 37 940 1819 2567 
+Ends in pixels: 472 1334 2081 2991 
+Distances between them in pixels: 
+468 485 486 
+
+Distances between them in meters: 
+
+0.78 m = Respecting social distance
+
+0.81 m = Respecting social distance
+
+0.81 m = Respecting social distance
+
+PROCESING TIME INFORMATION:
+
+Total time taken to detect changes and binarize on parallel: 26.0 milliseconds
+Total time taken to detect changes and binarize on sequential: 25.0 milliseconds
+
+Total time taken to reduce noise on parallel: 122.0 milliseconds
+Total time taken to reduce noise on sequential: 218.0 milliseconds
+
+Total time taken to detect people on parallel 29.0 milliseconds
+Total time taken to detect people on sequential: 35.0 milliseconds
+
+Addition of times parallel: 177.0
+
+Addition of times sequential: 278.0
+
+Saved time: 101.0
+
+
+images/Scene1Theater/1.jpg
+
+OBTAINED INFORMATION: 
+* Number of people in the room: 4
+
+Starts in pixels: 37 940 1819 2567 
+Ends in pixels: 472 1334 2081 2991 
+Distances between them in pixels: 
+468 485 486 
+
+Distances between them in meters: 
+
+0.78 m = Respecting social distance
+
+0.81 m = Respecting social distance
+
+0.81 m = Respecting social distance
+
+PROCESING TIME INFORMATION:
+
+Total time taken to detect changes and binarize on parallel: 10.0 milliseconds
+Total time taken to detect changes and binarize on sequential: 20.0 milliseconds
+
+Total time taken to reduce noise on parallel: 79.0 milliseconds
+Total time taken to reduce noise on sequential: 232.0 milliseconds
+
+Total time taken to detect people on parallel 18.0 milliseconds
+Total time taken to detect people on sequential: 34.0 milliseconds
+
+Addition of times parallel: 107.0
+
+Addition of times sequential: 286.0
+
+Saved time: 179.0
+
+
+images/Scene1Theater/1.jpg
+
+OBTAINED INFORMATION: 
+* Number of people in the room: 4
+
+Starts in pixels: 37 940 1819 2567 
+Ends in pixels: 472 1334 2081 2991 
+Distances between them in pixels: 
+468 485 486 
+
+Distances between them in meters: 
+
+0.78 m = Respecting social distance
+
+0.81 m = Respecting social distance
+
+0.81 m = Respecting social distance
+
+PROCESING TIME INFORMATION:
+
+Total time taken to detect changes and binarize on parallel: 10.0 milliseconds
+Total time taken to detect changes and binarize on sequential: 18.0 milliseconds
+
+Total time taken to reduce noise on parallel: 170.0 milliseconds
+Total time taken to reduce noise on sequential: 238.0 milliseconds
+
+Total time taken to detect people on parallel 22.0 milliseconds
+Total time taken to detect people on sequential: 37.0 milliseconds
+
+Addition of times parallel: 202.0
+
+Addition of times sequential: 293.0
+
+Saved time: 91.0
+
+
+images/Scene1Theater/1.jpg
+
+OBTAINED INFORMATION: 
+* Number of people in the room: 4
+
+Starts in pixels: 37 940 1819 2567 
+Ends in pixels: 472 1334 2081 2991 
+Distances between them in pixels: 
+468 485 486 
+
+Distances between them in meters: 
+
+0.78 m = Respecting social distance
+
+0.81 m = Respecting social distance
+
+0.81 m = Respecting social distance
+
+PROCESING TIME INFORMATION:
+
+Total time taken to detect changes and binarize on parallel: 10.0 milliseconds
+Total time taken to detect changes and binarize on sequential: 18.0 milliseconds
+
+Total time taken to reduce noise on parallel: 172.0 milliseconds
+Total time taken to reduce noise on sequential: 235.0 milliseconds
+
+Total time taken to detect people on parallel 18.0 milliseconds
+Total time taken to detect people on sequential: 34.0 milliseconds
+
+Addition of times parallel: 200.0
+
+Addition of times sequential: 287.0
+
+Saved time: 87.0
+
+
+images/Scene1Theater/1.jpg
+
+OBTAINED INFORMATION: 
+* Number of people in the room: 4
+
+Starts in pixels: 37 940 1819 2567 
+Ends in pixels: 472 1334 2081 2991 
+Distances between them in pixels: 
+468 485 486 
+
+Distances between them in meters: 
+
+0.78 m = Respecting social distance
+
+0.81 m = Respecting social distance
+
+0.81 m = Respecting social distance
+
+PROCESING TIME INFORMATION:
+
+Total time taken to detect changes and binarize on parallel: 9.0 milliseconds
+Total time taken to detect changes and binarize on sequential: 18.0 milliseconds
+
+Total time taken to reduce noise on parallel: 75.0 milliseconds
+Total time taken to reduce noise on sequential: 235.0 milliseconds
+
+Total time taken to detect people on parallel 19.0 milliseconds
+Total time taken to detect people on sequential: 34.0 milliseconds
+
+Addition of times parallel: 103.0
+
+Addition of times sequential: 287.0
+
+Saved time: 184.0
+
+
+images/Scene1Theater/1.jpg
+
+OBTAINED INFORMATION: 
+* Number of people in the room: 4
+
+Starts in pixels: 37 940 1819 2567 
+Ends in pixels: 472 1334 2081 2991 
+Distances between them in pixels: 
+468 485 486 
+
+Distances between them in meters: 
+
+0.78 m = Respecting social distance
+
+0.81 m = Respecting social distance
+
+0.81 m = Respecting social distance
+
+PROCESING TIME INFORMATION:
+
+Total time taken to detect changes and binarize on parallel: 10.0 milliseconds
+Total time taken to detect changes and binarize on sequential: 19.0 milliseconds
+
+Total time taken to reduce noise on parallel: 86.0 milliseconds
+Total time taken to reduce noise on sequential: 241.0 milliseconds
+
+Total time taken to detect people on parallel 19.0 milliseconds
+Total time taken to detect people on sequential: 35.0 milliseconds
+
+Addition of times parallel: 115.0
+
+Addition of times sequential: 295.0
+
+Saved time: 180.0
+
+
+images/Scene1Theater/1.jpg
+
+OBTAINED INFORMATION: 
+* Number of people in the room: 4
+
+Starts in pixels: 37 940 1819 2567 
+Ends in pixels: 472 1334 2081 2991 
+Distances between them in pixels: 
+468 485 486 
+
+Distances between them in meters: 
+
+0.78 m = Respecting social distance
+
+0.81 m = Respecting social distance
+
+0.81 m = Respecting social distance
+
+PROCESING TIME INFORMATION:
+
+Total time taken to detect changes and binarize on parallel: 9.0 milliseconds
+Total time taken to detect changes and binarize on sequential: 18.0 milliseconds
+
+Total time taken to reduce noise on parallel: 182.0 milliseconds
+Total time taken to reduce noise on sequential: 235.0 milliseconds
+
+Total time taken to detect people on parallel 19.0 milliseconds
+Total time taken to detect people on sequential: 34.0 milliseconds
+
+Addition of times parallel: 210.0
+
+Addition of times sequential: 287.0
+
+Saved time: 77.0
+
+
+images/Scene1Theater/1.jpg
+
+OBTAINED INFORMATION: 
+* Number of people in the room: 4
+
+Starts in pixels: 37 940 1819 2567 
+Ends in pixels: 472 1334 2081 2991 
+Distances between them in pixels: 
+468 485 486 
+
+Distances between them in meters: 
+
+0.78 m = Respecting social distance
+
+0.81 m = Respecting social distance
+
+0.81 m = Respecting social distance
+
+PROCESING TIME INFORMATION:
+
+Total time taken to detect changes and binarize on parallel: 11.0 milliseconds
+Total time taken to detect changes and binarize on sequential: 19.0 milliseconds
+
+Total time taken to reduce noise on parallel: 188.0 milliseconds
+Total time taken to reduce noise on sequential: 237.0 milliseconds
+
+Total time taken to detect people on parallel 19.0 milliseconds
+Total time taken to detect people on sequential: 33.0 milliseconds
+
+Addition of times parallel: 218.0
+
+Addition of times sequential: 289.0
+
+Saved time: 71.0
+
+
+images/Scene1Theater/1.jpg
+
+OBTAINED INFORMATION: 
+* Number of people in the room: 4
+
+Starts in pixels: 37 940 1819 2567 
+Ends in pixels: 472 1334 2081 2991 
+Distances between them in pixels: 
+468 485 486 
+
+Distances between them in meters: 
+
+0.78 m = Respecting social distance
+
+0.81 m = Respecting social distance
+
+0.81 m = Respecting social distance
+
+PROCESING TIME INFORMATION:
+
+Total time taken to detect changes and binarize on parallel: 11.0 milliseconds
+Total time taken to detect changes and binarize on sequential: 19.0 milliseconds
+
+Total time taken to reduce noise on parallel: 77.0 milliseconds
+Total time taken to reduce noise on sequential: 237.0 milliseconds
+
+Total time taken to detect people on parallel 19.0 milliseconds
+Total time taken to detect people on sequential: 33.0 milliseconds
+
+Addition of times parallel: 107.0
+
+Addition of times sequential: 289.0
+
+Saved time: 182.0
+
+
+images/Scene1Theater/1.jpg
+
+OBTAINED INFORMATION: 
+* Number of people in the room: 4
+
+Starts in pixels: 37 940 1819 2567 
+Ends in pixels: 472 1334 2081 2991 
+Distances between them in pixels: 
+468 485 486 
+
+Distances between them in meters: 
+
+0.78 m = Respecting social distance
+
+0.81 m = Respecting social distance
+
+0.81 m = Respecting social distance
+
+PROCESING TIME INFORMATION:
+
+Total time taken to detect changes and binarize on parallel: 10.0 milliseconds
+Total time taken to detect changes and binarize on sequential: 19.0 milliseconds
+
+Total time taken to reduce noise on parallel: 176.0 milliseconds
+Total time taken to reduce noise on sequential: 238.0 milliseconds
+
+Total time taken to detect people on parallel 19.0 milliseconds
+Total time taken to detect people on sequential: 34.0 milliseconds
+
+Addition of times parallel: 205.0
+
+Addition of times sequential: 291.0
+
+Saved time: 86.0
+
+
+images/Scene1Theater/1.jpg
+
+OBTAINED INFORMATION: 
+* Number of people in the room: 4
+
+Starts in pixels: 37 940 1819 2567 
+Ends in pixels: 472 1334 2081 2991 
+Distances between them in pixels: 
+468 485 486 
+
+Distances between them in meters: 
+
+0.78 m = Respecting social distance
+
+0.81 m = Respecting social distance
+
+0.81 m = Respecting social distance
+
+PROCESING TIME INFORMATION:
+
+Total time taken to detect changes and binarize on parallel: 10.0 milliseconds
+Total time taken to detect changes and binarize on sequential: 18.0 milliseconds
+
+Total time taken to reduce noise on parallel: 77.0 milliseconds
+Total time taken to reduce noise on sequential: 234.0 milliseconds
+
+Total time taken to detect people on parallel 19.0 milliseconds
+Total time taken to detect people on sequential: 33.0 milliseconds
+
+Addition of times parallel: 106.0
+
+Addition of times sequential: 285.0
+
+Saved time: 179.0
+
+
+images/Scene1Theater/1.jpg
+
+OBTAINED INFORMATION: 
+* Number of people in the room: 4
+
+Starts in pixels: 37 940 1819 2567 
+Ends in pixels: 472 1334 2081 2991 
+Distances between them in pixels: 
+468 485 486 
+
+Distances between them in meters: 
+
+0.78 m = Respecting social distance
+
+0.81 m = Respecting social distance
+
+0.81 m = Respecting social distance
+
+PROCESING TIME INFORMATION:
+
+Total time taken to detect changes and binarize on parallel: 10.0 milliseconds
+Total time taken to detect changes and binarize on sequential: 18.0 milliseconds
+
+Total time taken to reduce noise on parallel: 171.0 milliseconds
+Total time taken to reduce noise on sequential: 235.0 milliseconds
+
+Total time taken to detect people on parallel 19.0 milliseconds
+Total time taken to detect people on sequential: 35.0 milliseconds
+
+Addition of times parallel: 200.0
+
+Addition of times sequential: 288.0
+
+Saved time: 88.0
+
+
+images/Scene1Theater/1.jpg
+
+OBTAINED INFORMATION: 
+* Number of people in the room: 4
+
+Starts in pixels: 37 940 1819 2567 
+Ends in pixels: 472 1334 2081 2991 
+Distances between them in pixels: 
+468 485 486 
+
+Distances between them in meters: 
+
+0.78 m = Respecting social distance
+
+0.81 m = Respecting social distance
+
+0.81 m = Respecting social distance
+
+PROCESING TIME INFORMATION:
+
+Total time taken to detect changes and binarize on parallel: 9.0 milliseconds
+Total time taken to detect changes and binarize on sequential: 18.0 milliseconds
+
+Total time taken to reduce noise on parallel: 166.0 milliseconds
+Total time taken to reduce noise on sequential: 237.0 milliseconds
+
+Total time taken to detect people on parallel 19.0 milliseconds
+Total time taken to detect people on sequential: 34.0 milliseconds
+
+Addition of times parallel: 194.0
+
+Addition of times sequential: 289.0
+
+Saved time: 95.0
+
+
+images/Scene1Theater/1.jpg
+
+OBTAINED INFORMATION: 
+* Number of people in the room: 4
+
+Starts in pixels: 37 940 1819 2567 
+Ends in pixels: 472 1334 2081 2991 
+Distances between them in pixels: 
+468 485 486 
+
+Distances between them in meters: 
+
+0.78 m = Respecting social distance
+
+0.81 m = Respecting social distance
+
+0.81 m = Respecting social distance
+
+PROCESING TIME INFORMATION:
+
+Total time taken to detect changes and binarize on parallel: 10.0 milliseconds
+Total time taken to detect changes and binarize on sequential: 17.0 milliseconds
+
+Total time taken to reduce noise on parallel: 179.0 milliseconds
+Total time taken to reduce noise on sequential: 241.0 milliseconds
+
+Total time taken to detect people on parallel 19.0 milliseconds
+Total time taken to detect people on sequential: 34.0 milliseconds
+
+Addition of times parallel: 208.0
+
+Addition of times sequential: 292.0
+
+Saved time: 84.0
+
+
+^CCarloss-iMac:src carlosvazquez$ 

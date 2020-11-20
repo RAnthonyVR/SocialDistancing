@@ -1,0 +1,586 @@
+Last login: Thu Nov 19 12:07:29 on ttys000
+
+The default interactive shell is now zsh.
+To update your account to use zsh, please run `chsh -s /bin/zsh`.
+For more details, please visit https://support.apple.com/kb/HT208050.
+Carloss-iMac:~ carlosvazquez$ cd /Users/carlosvazquez/Downloads/SocialDistancing/SocialDistance/src 
+Carloss-iMac:src carlosvazquez$ javac socialdistance/SocialDistance.java
+Carloss-iMac:src carlosvazquez$ java socialdistance/SocialDistance
+Initial configuration
+Please enter the horizontal distance of the room in meters
+8
+Please enter the social distance of the room in meters (recommended 1 meter)
+1
+Please enter the test case (1 to 4)
+2
+images/Scene2Hospital/1.jpg
+
+OBTAINED INFORMATION: 
+* Number of people in the room: 5
+
+Starts in pixels: 431 2191 3900 4632 5328 
+Ends in pixels: 1023 2811 4406 5148 5762 
+Distances between them in pixels: 
+1168 1089 226 180 
+
+Distances between them in meters: 
+
+1.38 m = Respecting social distance
+
+1.28 m = Respecting social distance
+
+0.27 m = ALERT! Not respecting social distance
+
+0.21 m = ALERT! Not respecting social distance
+
+PROCESING TIME INFORMATION:
+
+Total time taken to detect changes and binarize on parallel: 80.0 milliseconds
+Total time taken to detect changes and binarize on sequential: 111.0 milliseconds
+
+Total time taken to reduce noise on parallel: 582.0 milliseconds
+Total time taken to reduce noise on sequential: 961.0 milliseconds
+
+Total time taken to detect people on parallel 140.0 milliseconds
+Total time taken to detect people on sequential: 255.0 milliseconds
+
+Addition of times parallel: 802.0
+
+Addition of times sequential: 1327.0
+
+Saved time: 525.0
+
+
+images/Scene2Hospital/1.jpg
+
+OBTAINED INFORMATION: 
+* Number of people in the room: 5
+
+Starts in pixels: 431 2191 3900 4632 5328 
+Ends in pixels: 1023 2811 4406 5148 5762 
+Distances between them in pixels: 
+1168 1089 226 180 
+
+Distances between them in meters: 
+
+1.38 m = Respecting social distance
+
+1.28 m = Respecting social distance
+
+0.27 m = ALERT! Not respecting social distance
+
+0.21 m = ALERT! Not respecting social distance
+
+PROCESING TIME INFORMATION:
+
+Total time taken to detect changes and binarize on parallel: 72.0 milliseconds
+Total time taken to detect changes and binarize on sequential: 98.0 milliseconds
+
+Total time taken to reduce noise on parallel: 527.0 milliseconds
+Total time taken to reduce noise on sequential: 981.0 milliseconds
+
+Total time taken to detect people on parallel 137.0 milliseconds
+Total time taken to detect people on sequential: 256.0 milliseconds
+
+Addition of times parallel: 736.0
+
+Addition of times sequential: 1335.0
+
+Saved time: 599.0
+
+
+images/Scene2Hospital/1.jpg
+
+OBTAINED INFORMATION: 
+* Number of people in the room: 5
+
+Starts in pixels: 431 2191 3900 4632 5328 
+Ends in pixels: 1023 2811 4406 5148 5762 
+Distances between them in pixels: 
+1168 1089 226 180 
+
+Distances between them in meters: 
+
+1.38 m = Respecting social distance
+
+1.28 m = Respecting social distance
+
+0.27 m = ALERT! Not respecting social distance
+
+0.21 m = ALERT! Not respecting social distance
+
+PROCESING TIME INFORMATION:
+
+Total time taken to detect changes and binarize on parallel: 44.0 milliseconds
+Total time taken to detect changes and binarize on sequential: 76.0 milliseconds
+
+Total time taken to reduce noise on parallel: 396.0 milliseconds
+Total time taken to reduce noise on sequential: 834.0 milliseconds
+
+Total time taken to detect people on parallel 132.0 milliseconds
+Total time taken to detect people on sequential: 255.0 milliseconds
+
+Addition of times parallel: 572.0
+
+Addition of times sequential: 1165.0
+
+Saved time: 593.0
+
+
+images/Scene2Hospital/1.jpg
+
+OBTAINED INFORMATION: 
+* Number of people in the room: 5
+
+Starts in pixels: 431 2191 3900 4632 5328 
+Ends in pixels: 1023 2811 4406 5148 5762 
+Distances between them in pixels: 
+1168 1089 226 180 
+
+Distances between them in meters: 
+
+1.38 m = Respecting social distance
+
+1.28 m = Respecting social distance
+
+0.27 m = ALERT! Not respecting social distance
+
+0.21 m = ALERT! Not respecting social distance
+
+PROCESING TIME INFORMATION:
+
+Total time taken to detect changes and binarize on parallel: 44.0 milliseconds
+Total time taken to detect changes and binarize on sequential: 81.0 milliseconds
+
+Total time taken to reduce noise on parallel: 399.0 milliseconds
+Total time taken to reduce noise on sequential: 1023.0 milliseconds
+
+Total time taken to detect people on parallel 134.0 milliseconds
+Total time taken to detect people on sequential: 267.0 milliseconds
+
+Addition of times parallel: 577.0
+
+Addition of times sequential: 1371.0
+
+Saved time: 794.0
+
+
+images/Scene2Hospital/1.jpg
+
+OBTAINED INFORMATION: 
+* Number of people in the room: 5
+
+Starts in pixels: 431 2191 3900 4632 5328 
+Ends in pixels: 1023 2811 4406 5148 5762 
+Distances between them in pixels: 
+1168 1089 226 180 
+
+Distances between them in meters: 
+
+1.38 m = Respecting social distance
+
+1.28 m = Respecting social distance
+
+0.27 m = ALERT! Not respecting social distance
+
+0.21 m = ALERT! Not respecting social distance
+
+PROCESING TIME INFORMATION:
+
+Total time taken to detect changes and binarize on parallel: 49.0 milliseconds
+Total time taken to detect changes and binarize on sequential: 87.0 milliseconds
+
+Total time taken to reduce noise on parallel: 445.0 milliseconds
+Total time taken to reduce noise on sequential: 962.0 milliseconds
+
+Total time taken to detect people on parallel 127.0 milliseconds
+Total time taken to detect people on sequential: 256.0 milliseconds
+
+Addition of times parallel: 621.0
+
+Addition of times sequential: 1305.0
+
+Saved time: 684.0
+
+
+images/Scene2Hospital/1.jpg
+
+OBTAINED INFORMATION: 
+* Number of people in the room: 5
+
+Starts in pixels: 431 2191 3900 4632 5328 
+Ends in pixels: 1023 2811 4406 5148 5762 
+Distances between them in pixels: 
+1168 1089 226 180 
+
+Distances between them in meters: 
+
+1.38 m = Respecting social distance
+
+1.28 m = Respecting social distance
+
+0.27 m = ALERT! Not respecting social distance
+
+0.21 m = ALERT! Not respecting social distance
+
+PROCESING TIME INFORMATION:
+
+Total time taken to detect changes and binarize on parallel: 44.0 milliseconds
+Total time taken to detect changes and binarize on sequential: 78.0 milliseconds
+
+Total time taken to reduce noise on parallel: 487.0 milliseconds
+Total time taken to reduce noise on sequential: 990.0 milliseconds
+
+Total time taken to detect people on parallel 133.0 milliseconds
+Total time taken to detect people on sequential: 248.0 milliseconds
+
+Addition of times parallel: 664.0
+
+Addition of times sequential: 1316.0
+
+Saved time: 652.0
+
+
+images/Scene2Hospital/1.jpg
+
+OBTAINED INFORMATION: 
+* Number of people in the room: 5
+
+Starts in pixels: 431 2191 3900 4632 5328 
+Ends in pixels: 1023 2811 4406 5148 5762 
+Distances between them in pixels: 
+1168 1089 226 180 
+
+Distances between them in meters: 
+
+1.38 m = Respecting social distance
+
+1.28 m = Respecting social distance
+
+0.27 m = ALERT! Not respecting social distance
+
+0.21 m = ALERT! Not respecting social distance
+
+PROCESING TIME INFORMATION:
+
+Total time taken to detect changes and binarize on parallel: 43.0 milliseconds
+Total time taken to detect changes and binarize on sequential: 81.0 milliseconds
+
+Total time taken to reduce noise on parallel: 500.0 milliseconds
+Total time taken to reduce noise on sequential: 979.0 milliseconds
+
+Total time taken to detect people on parallel 133.0 milliseconds
+Total time taken to detect people on sequential: 258.0 milliseconds
+
+Addition of times parallel: 676.0
+
+Addition of times sequential: 1318.0
+
+Saved time: 642.0
+
+
+images/Scene2Hospital/1.jpg
+
+OBTAINED INFORMATION: 
+* Number of people in the room: 5
+
+Starts in pixels: 431 2191 3900 4632 5328 
+Ends in pixels: 1023 2811 4406 5148 5762 
+Distances between them in pixels: 
+1168 1089 226 180 
+
+Distances between them in meters: 
+
+1.38 m = Respecting social distance
+
+1.28 m = Respecting social distance
+
+0.27 m = ALERT! Not respecting social distance
+
+0.21 m = ALERT! Not respecting social distance
+
+PROCESING TIME INFORMATION:
+
+Total time taken to detect changes and binarize on parallel: 43.0 milliseconds
+Total time taken to detect changes and binarize on sequential: 79.0 milliseconds
+
+Total time taken to reduce noise on parallel: 555.0 milliseconds
+Total time taken to reduce noise on sequential: 993.0 milliseconds
+
+Total time taken to detect people on parallel 137.0 milliseconds
+Total time taken to detect people on sequential: 261.0 milliseconds
+
+Addition of times parallel: 735.0
+
+Addition of times sequential: 1333.0
+
+Saved time: 598.0
+
+
+images/Scene2Hospital/1.jpg
+
+OBTAINED INFORMATION: 
+* Number of people in the room: 5
+
+Starts in pixels: 431 2191 3900 4632 5328 
+Ends in pixels: 1023 2811 4406 5148 5762 
+Distances between them in pixels: 
+1168 1089 226 180 
+
+Distances between them in meters: 
+
+1.38 m = Respecting social distance
+
+1.28 m = Respecting social distance
+
+0.27 m = ALERT! Not respecting social distance
+
+0.21 m = ALERT! Not respecting social distance
+
+PROCESING TIME INFORMATION:
+
+Total time taken to detect changes and binarize on parallel: 43.0 milliseconds
+Total time taken to detect changes and binarize on sequential: 78.0 milliseconds
+
+Total time taken to reduce noise on parallel: 474.0 milliseconds
+Total time taken to reduce noise on sequential: 947.0 milliseconds
+
+Total time taken to detect people on parallel 128.0 milliseconds
+Total time taken to detect people on sequential: 254.0 milliseconds
+
+Addition of times parallel: 645.0
+
+Addition of times sequential: 1279.0
+
+Saved time: 634.0
+
+
+images/Scene2Hospital/1.jpg
+
+OBTAINED INFORMATION: 
+* Number of people in the room: 5
+
+Starts in pixels: 431 2191 3900 4632 5328 
+Ends in pixels: 1023 2811 4406 5148 5762 
+Distances between them in pixels: 
+1168 1089 226 180 
+
+Distances between them in meters: 
+
+1.38 m = Respecting social distance
+
+1.28 m = Respecting social distance
+
+0.27 m = ALERT! Not respecting social distance
+
+0.21 m = ALERT! Not respecting social distance
+
+PROCESING TIME INFORMATION:
+
+Total time taken to detect changes and binarize on parallel: 43.0 milliseconds
+Total time taken to detect changes and binarize on sequential: 79.0 milliseconds
+
+Total time taken to reduce noise on parallel: 481.0 milliseconds
+Total time taken to reduce noise on sequential: 988.0 milliseconds
+
+Total time taken to detect people on parallel 133.0 milliseconds
+Total time taken to detect people on sequential: 266.0 milliseconds
+
+Addition of times parallel: 657.0
+
+Addition of times sequential: 1333.0
+
+Saved time: 676.0
+
+
+images/Scene2Hospital/1.jpg
+
+OBTAINED INFORMATION: 
+* Number of people in the room: 5
+
+Starts in pixels: 431 2191 3900 4632 5328 
+Ends in pixels: 1023 2811 4406 5148 5762 
+Distances between them in pixels: 
+1168 1089 226 180 
+
+Distances between them in meters: 
+
+1.38 m = Respecting social distance
+
+1.28 m = Respecting social distance
+
+0.27 m = ALERT! Not respecting social distance
+
+0.21 m = ALERT! Not respecting social distance
+
+PROCESING TIME INFORMATION:
+
+Total time taken to detect changes and binarize on parallel: 45.0 milliseconds
+Total time taken to detect changes and binarize on sequential: 79.0 milliseconds
+
+Total time taken to reduce noise on parallel: 487.0 milliseconds
+Total time taken to reduce noise on sequential: 972.0 milliseconds
+
+Total time taken to detect people on parallel 129.0 milliseconds
+Total time taken to detect people on sequential: 263.0 milliseconds
+
+Addition of times parallel: 661.0
+
+Addition of times sequential: 1314.0
+
+Saved time: 653.0
+
+
+images/Scene2Hospital/1.jpg
+
+OBTAINED INFORMATION: 
+* Number of people in the room: 5
+
+Starts in pixels: 431 2191 3900 4632 5328 
+Ends in pixels: 1023 2811 4406 5148 5762 
+Distances between them in pixels: 
+1168 1089 226 180 
+
+Distances between them in meters: 
+
+1.38 m = Respecting social distance
+
+1.28 m = Respecting social distance
+
+0.27 m = ALERT! Not respecting social distance
+
+0.21 m = ALERT! Not respecting social distance
+
+PROCESING TIME INFORMATION:
+
+Total time taken to detect changes and binarize on parallel: 44.0 milliseconds
+Total time taken to detect changes and binarize on sequential: 78.0 milliseconds
+
+Total time taken to reduce noise on parallel: 636.0 milliseconds
+Total time taken to reduce noise on sequential: 1010.0 milliseconds
+
+Total time taken to detect people on parallel 136.0 milliseconds
+Total time taken to detect people on sequential: 270.0 milliseconds
+
+Addition of times parallel: 816.0
+
+Addition of times sequential: 1358.0
+
+Saved time: 542.0
+
+
+images/Scene2Hospital/1.jpg
+
+OBTAINED INFORMATION: 
+* Number of people in the room: 5
+
+Starts in pixels: 431 2191 3900 4632 5328 
+Ends in pixels: 1023 2811 4406 5148 5762 
+Distances between them in pixels: 
+1168 1089 226 180 
+
+Distances between them in meters: 
+
+1.38 m = Respecting social distance
+
+1.28 m = Respecting social distance
+
+0.27 m = ALERT! Not respecting social distance
+
+0.21 m = ALERT! Not respecting social distance
+
+PROCESING TIME INFORMATION:
+
+Total time taken to detect changes and binarize on parallel: 45.0 milliseconds
+Total time taken to detect changes and binarize on sequential: 82.0 milliseconds
+
+Total time taken to reduce noise on parallel: 479.0 milliseconds
+Total time taken to reduce noise on sequential: 957.0 milliseconds
+
+Total time taken to detect people on parallel 128.0 milliseconds
+Total time taken to detect people on sequential: 248.0 milliseconds
+
+Addition of times parallel: 652.0
+
+Addition of times sequential: 1287.0
+
+Saved time: 635.0
+
+
+images/Scene2Hospital/1.jpg
+
+OBTAINED INFORMATION: 
+* Number of people in the room: 5
+
+Starts in pixels: 431 2191 3900 4632 5328 
+Ends in pixels: 1023 2811 4406 5148 5762 
+Distances between them in pixels: 
+1168 1089 226 180 
+
+Distances between them in meters: 
+
+1.38 m = Respecting social distance
+
+1.28 m = Respecting social distance
+
+0.27 m = ALERT! Not respecting social distance
+
+0.21 m = ALERT! Not respecting social distance
+
+PROCESING TIME INFORMATION:
+
+Total time taken to detect changes and binarize on parallel: 44.0 milliseconds
+Total time taken to detect changes and binarize on sequential: 78.0 milliseconds
+
+Total time taken to reduce noise on parallel: 481.0 milliseconds
+Total time taken to reduce noise on sequential: 968.0 milliseconds
+
+Total time taken to detect people on parallel 129.0 milliseconds
+Total time taken to detect people on sequential: 249.0 milliseconds
+
+Addition of times parallel: 654.0
+
+Addition of times sequential: 1295.0
+
+Saved time: 641.0
+
+
+images/Scene2Hospital/1.jpg
+
+OBTAINED INFORMATION: 
+* Number of people in the room: 5
+
+Starts in pixels: 431 2191 3900 4632 5328 
+Ends in pixels: 1023 2811 4406 5148 5762 
+Distances between them in pixels: 
+1168 1089 226 180 
+
+Distances between them in meters: 
+
+1.38 m = Respecting social distance
+
+1.28 m = Respecting social distance
+
+0.27 m = ALERT! Not respecting social distance
+
+0.21 m = ALERT! Not respecting social distance
+
+PROCESING TIME INFORMATION:
+
+Total time taken to detect changes and binarize on parallel: 45.0 milliseconds
+Total time taken to detect changes and binarize on sequential: 81.0 milliseconds
+
+Total time taken to reduce noise on parallel: 486.0 milliseconds
+Total time taken to reduce noise on sequential: 991.0 milliseconds
+
+Total time taken to detect people on parallel 131.0 milliseconds
+Total time taken to detect people on sequential: 249.0 milliseconds
+
+Addition of times parallel: 662.0
+
+Addition of times sequential: 1321.0
+
+Saved time: 659.0
+
+
+^CCarloss-iMac:src carlosvazquez$ 
