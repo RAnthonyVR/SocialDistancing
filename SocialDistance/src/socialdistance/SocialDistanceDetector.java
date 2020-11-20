@@ -287,7 +287,7 @@ public class SocialDistanceDetector {
     // Method to print processing times, to compare times between sequential and parallel
     /* Parameters: double parallelTimeToDetectChangesAndBinarize, double sequentialTimeToDetectChangesAndBinarize, double parallelTimeNoiseReduction, double sequentialTimeNoiseReduction, double parallelTimePeopleDetector, double sequentialTimePeopleDetector
     Returns: void */
-    public void printProcessingTimes (double parallelTimeToDetectChangesAndBinarize, double sequentialTimeToDetectChangesAndBinarize, double parallelTimeNoiseReduction, double sequentialTimeNoiseReduction, double parallelTimePeopleDetector, double sequentialTimePeopleDetector ) {
+    public void printProcessingTimes (double parallelTimeToDetectChangesAndBinarize, double sequentialTimeToDetectChangesAndBinarize, double parallelTimeNoiseReduction, double sequentialTimeNoiseReduction, double parallelTimePeopleDetector, double sequentialTimePeopleDetector, double timeJOIN) {
         System.out.println("\nPROCESING TIME INFORMATION:\n");
         System.out.println("Total time taken to detect changes and binarize on parallel: " + parallelTimeToDetectChangesAndBinarize + " milliseconds");
         if (this.runToCompareWithSequential) {
@@ -297,12 +297,12 @@ public class SocialDistanceDetector {
         if (this.runToCompareWithSequential) {
             System.out.println("Total time taken to reduce noise on sequential: " + sequentialTimeNoiseReduction + " milliseconds" + "\n");
         }
-        System.out.println("Total time taken to detect people on parallel " + parallelTimePeopleDetector + " milliseconds");
+        System.out.println("Total time taken to detect people on parallel " + (parallelTimePeopleDetector + timeJOIN) + " milliseconds");
         if (this.runToCompareWithSequential) {
             System.out.println("Total time taken to detect people on sequential: " + sequentialTimePeopleDetector + " milliseconds" + "\n");
         }
         if (this.runToCompareWithSequential) {
-            double totalTimeParallel = (parallelTimeToDetectChangesAndBinarize + parallelTimeNoiseReduction + parallelTimePeopleDetector );
+            double totalTimeParallel = (parallelTimeToDetectChangesAndBinarize + parallelTimeNoiseReduction + parallelTimePeopleDetector + timeJOIN);
             double totalTimeSequential = (sequentialTimeToDetectChangesAndBinarize + sequentialTimeNoiseReduction + sequentialTimePeopleDetector);
             System.out.println("Addition of times parallel: " + totalTimeParallel + "\n");
             System.out.println("Addition of times sequential: " + totalTimeSequential  + "\n");
@@ -341,14 +341,13 @@ public class SocialDistanceDetector {
         joinObtainedBoundaries();
         double finishTimeInMilisecondsJOIN = System.currentTimeMillis();
         double timeJOIN = finishTimeInMilisecondsJOIN - beginTimeInMilisecondsJOIN;
-        
         // ----------------------------------------------------------Print results------------------------------------------------------------------------
 
         // Print obtained data
         printPeopleObtainedInformation();
         
         // Print processing times
-        printProcessingTimes (parallelTimeToDetectChangesAndBinarize, sequentialTimeToDetectChangesAndBinarize, parallelTimeNoiseReduction, sequentialTimeNoiseReduction, parallelTimePeopleDetector, sequentialTimePeopleDetector );
+        printProcessingTimes (parallelTimeToDetectChangesAndBinarize, sequentialTimeToDetectChangesAndBinarize, parallelTimeNoiseReduction, sequentialTimeNoiseReduction, parallelTimePeopleDetector, sequentialTimePeopleDetector, timeJOIN);
     }
 
 }

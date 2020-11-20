@@ -1,8 +1,9 @@
 /*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+* Ricardo Antonio Vázquez Rodríguez A01209245
+* Final Project
+* Interface
+*/
+
 package socialdistance;
 
 import java.awt.Image;
@@ -14,17 +15,18 @@ import javax.swing.ImageIcon;
 
 /**
  *
- * @author Tony
+ * Interface used to show visually the results from the terminal
  */
 public class Interface extends javax.swing.JFrame {
 
+    // attributes, alert lights, and shown images
     private ImageIcon scene;
     private BufferedImage imageScene;
     private ImageIcon redAlarmLight = new ImageIcon(SocialDistance.class.getResource("images/Light/alarm.png"));
     private ImageIcon greenAlarmLight = new ImageIcon(SocialDistance.class.getResource("images/Light/ok.png"));
     private String emptyBackgroundPath;
     
-    
+    // method that loads an image and shows it in the interface, if it is bigger than the jFrame, it makes it smaller
     void loadImage(String imagePath) {
         try {
             imageScene = ImageIO.read(SocialDistance.class.getResource(imagePath));
@@ -32,6 +34,7 @@ public class Interface extends javax.swing.JFrame {
             e.printStackTrace();
         }
         
+        // make image smaller than jFrame
         int imageDivisor = 1;
         
         if (imageScene.getHeight() > 503) {
@@ -40,28 +43,30 @@ public class Interface extends javax.swing.JFrame {
             }
         }
         
+        // Set image icon to Jframe
         Image smallImage = imageScene.getScaledInstance(imageScene.getWidth()/imageDivisor, imageScene.getHeight()/imageDivisor, Image.SCALE_SMOOTH);
         
         scene = new ImageIcon(smallImage);
         jLabel1.setIcon(scene);
-        
-        //System.out.println("LOADED IMAGE: " + imagePath);
     }
     
+    // method to write the information text on the jframe
     public void setPeopleInfo (String info) {
         jTextArea1.setText(info);
     }
     
+    // Set the alarm red
     public void enableAlarm () {
         jLabel2.setIcon(redAlarmLight);
     }
     
+    // set the alarm green
     public void disableAlarm () {
         jLabel2.setIcon(greenAlarmLight);
     }
     
     /**
-     * Creates new form Interface
+     * Creates new form Interface, set the background image
      */
     public Interface(String emptyBackgroundPath) {
         initComponents();
