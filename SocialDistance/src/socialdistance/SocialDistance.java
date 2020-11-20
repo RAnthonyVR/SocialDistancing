@@ -31,7 +31,7 @@ public class SocialDistance {
         System.out.println("Please enter the social distance of the room in meters (recommended 1 meter)");
         double social_distance_meters = distanceScanner.nextDouble(); // meters
         
-        System.out.println("Please enter the test case (1 to 4)");
+        System.out.println("Please enter the test case (1 to 3)");
         int testCase = distanceScanner.nextInt();
         
         boolean runToCompareWithSequential = true; // set to true to run sequential implementation and compare the running times
@@ -80,15 +80,6 @@ public class SocialDistance {
             relativeFolderPath = "images/Scene3Elevator/";
             emptyscenarioImageName = "emptyElevator.jpg";
             numberOfImages = 6;
-        }
-        
-        //Extra real life
-        //Horizontal distance of the room: 2
-        //Horizontal space tolerance: 1
-        else if (testCase == 4) {
-            relativeFolderPath = "images/RealLifeTestVisitRoom/";
-            emptyscenarioImageName = "empty.jpg";
-            numberOfImages = 1;
         }
         
         
